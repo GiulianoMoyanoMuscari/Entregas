@@ -1,46 +1,65 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Formulario de Registro</title>
-</head>
-<body>
-    <h1>Formulario de registro</h1>
-    <form>
-        <label for="nombre">Nombre: </label>
-        <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario de Registro</title>
+    </head>
+    <body>
+        <header>
+            <h1>Formulario de registro</h1>
+        </header>
+        <main>
+            <form>
+                <div>
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+                </div>
 
-        <br><br>
+                <br>
 
-        <label for="apellido">Apellido: </label>
-        <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
+                <div>
+                    <label for="apellido">Apellido: </label>
+                    <input type="text" id="apellido" placeholder="Ingrese su apellido" required>
+                </div>
 
-        <br><br>
+                <br>
 
-        <span>Modalidad de Cursada: </span>
-        <input type="radio" name="modalidad" id="modalidad">
-        <label for="modalidad">On-Demand</label>
-        <input type="radio" name="modalidad" id="modalidad">
-        <label for="modalidad">En vivo</label>
+                <div>
+                    Modalidad de Cursada:
+                    <input type="radio" name="modalidad" id="on-demand">
+                    <label for="on-demand">On-Demand</label>
+                    <input type="radio" name="modalidad" id="vivo">
+                    <label for="vivo">En vivo</label>
+                </div>
 
-        <br><br>
-        
-        <label for="correo">Correo: </label>
-        <input type="email" id="correo" placeholder="Ingrese su email" required>
-        
-        <br><br>
+                <br>
 
-        <input type="checkbox" id="recibirinf">
-        <label for="recibirinf">Deseo recibir información sobre nuevos posteos en la plataforma de Nucba.</label>
+                <div>
+                    <label for="correo">Correo: </label>
+                    <input type="email" id="correo" placeholder="Ingrese su email" required>
+                </div>
 
-        <br><br>
+                <br>
 
-        <input type="checkbox" id="tyc" required>
-        <label for="tyc">Declaro que leí los terminos y condiciones y estoy listo para convertirme en desarrollador web Full Stack</label>
+                <div>
+                    <input type="checkbox" id="recibirinf">
+                    <label for="recibirinf">Deseo recibir información sobre nuevos posteos en la plataforma de Nucba.</label>
+                </div>
 
-        <br><br>
+                <br>
 
-        <input type="submit">
-    </form>
-</body>
+                <div>
+                    <input type="checkbox" id="tyc" required>
+                    <label for="tyc">Declaro que leí los terminos y condiciones y estoy listo para convertirme en desarrollador web Full Stack</label>
+                </div>
+
+                <br>
+                
+                <div>
+                    <input type="submit">
+                </div>
+            </form>
+        </main>
+
+    </body>
 </html>
