@@ -1,0 +1,131 @@
+@media(max-width: 1200px) {
+/* ------------------------- Header y Barra de Navegacion ------------------------- */
+  header{
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+
+@media(max-width: 992px) {
+  /* ---------------------------- Main ---------------------------- */
+
+/* ---------- Section-hero ---------- */
+  #hero{
+    align-items: flex-end;
+  }
+
+  .hero-info{
+    padding-top: 10px;
+  }
+
+  .hero-info h1{
+    font-size: 44px;
+  }
+
+  .hero-info h3{
+    font-size: 24px;
+  }
+
+  .hero-info p{
+    font-size: 18px;
+  }
+
+  #hero > img{
+    width: 30%;
+  }
+
+/* ---------- Section-Info ---------- */
+  #info p{
+    font-size: 18px;
+  }
+
+/* ---------- Section Ventajas + Cards ---------- */
+  .container-cards{
+    flex-direction: column;
+  }
+
+/* --------------- Section Contacto --------------- */
+  #contacto{
+    gap: 30px
+  }
+
+  .container-contact{
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 630px) {
+/* ------------------------- Header  ------------------------- */
+  header{
+    flex-direction: row;
+  }
+
+  .titulo{
+    width: 70%;
+  }
+
+  .menu-label{
+    display: flex ;
+    cursor: pointer;
+  }
+
+  .navbar-list{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 110px;
+    left: 0%;
+    padding: 40px 0;
+    background: linear-gradient(to bottom, var(--crazy-orange));
+    z-index: 2;
+  }
+
+  .navbar-list a{
+    /* color: var(--text-white); */
+  }
+
+  #menu-toggle:checked + .navbar-list{ /*para que la lista se muestre cuando se clickea el icono del menu*/
+    display: flex; 
+  }
+  
+
+}
+
+
+@media (max-width: 576px) {
+/* ------------------------- Header  ------------------------- */
+  .titulo span {
+    font-size: 24px;
+  }
+
+  .navbar-list a {
+    font-size: 18px;
+  }
+
+  #hero{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .hero-info{
+    width: 90%;
+    align-items: center;
+  }
+
+  .hero-info h1,
+  .hero-info h3{
+    text-align: center;
+  }
+
+  .hero-info h1{
+    min-width: 300px;
+  }
+
+}
+

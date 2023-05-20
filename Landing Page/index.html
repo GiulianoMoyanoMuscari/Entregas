@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>Mi Portfolio</title>
     <!-- CSS -->
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/mediaqueries.css">
 </head>
+
 <body>
     <header>
         <div class="titulo">
@@ -15,6 +18,12 @@
             <span>Giuliano Ezequiel Moyano Muscari</span>
         </div>
         <nav>
+            <!-- Agregamos el label con la imagen del menu hamburguesa -->
+            <label for="menu-toggle" class="menu-label">
+                <img src="assets/img/menu.png" class="menu-icon">
+            </label>
+            <input type="checkbox"  id="menu-toggle">
+
             <ul class="navbar-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Sobre mi</a></li>
@@ -25,21 +34,98 @@
     </header>
 
     <main>
-        <!-- Section Hero -->
+        <!--------------- Section Hero --------------->
         <section id="hero">
             <div class="hero-info">
-                <h1>¡Hola! Soy Giuliano</h1>
-                <p>Soy un apasionado estudiante de programación</p>
+                <h1>¡Hola! Bienvenido a mi WebSite</h1>
+                <h3>Estudiante de Programación Web Full Stack</h3>
+                <div class="info-icon">
+                    <p>Chequea mi </p>
+                    <a href="#"><img src="assets/img/Icono/icon-linkedin.svg" alt="Icono Linkedin" class="icons-hero"></a>
+                    <a href="#"><img src="assets/img/Icono/icon-github.svg" alt="Icono Github" class="icons-hero"></a>
+                </div>
             </div>
-            <img src="assets/img/hero-coding.svg" alt="Coding">
+            <img src="assets/img/hero/Programming-amico (rose).svg" alt="Coding">
         </section>
 
-        <!-- Section Información -->
+        <!--------------- Section Información --------------->
         <section id="info">
             <p>
-                Actualmente estoy estudiando Programacion Web Full Stack en Nucba y he adquirido habilidades en HTML, CSS, JavaScript y React. Me encanta el desafío que representa la programación y disfruto de la oportunidad de aprender cosas nuevas cada día.
+                Hola me llamo Giuliano y actualmente estoy estudiando Programacion Web Full Stack en Nucba y he adquirido habilidades en HTML, CSS, JavaScript y React. Me encanta el desafío que representa la programación y disfruto de la oportunidad de aprender cosas nuevas cada día.
             </p>
         </section>
+
+        <!--------------- Section Ventajas + Cards --------------->
+        <section id="ventajas">
+            <h2>Mis Ventajas</h2>
+            <p class="info-ventajas">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab asperiores cupiditate, est distinctio porro ipsam. Pariatur, temporibus? Voluptate magnam, voluptas eius a reprehenderit veniam dolorem, deleniti earum, praesentium iusto laboriosam?</p>
+            <div class="container-cards">
+                <div class="card-ventaja">
+                    <img src="assets/img/Icono/icono-ventajas-cards_smiley-face.svg" alt="Icono ventaja">
+                    <h4>Beneficio 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nihil dolores facere, eum consectetur doloremque.</p>
+                </div>
+                <div class="card-ventaja">
+                    <img src="assets/img/Icono/icono-ventajas-cards_smiley-face.svg" alt="Icono ventaja">
+                    <h4>Beneficio 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nihil dolores facere, eum consectetur doloremque.</p>
+                </div>
+                <div class="card-ventaja">
+                    <img src="assets/img/Icono/icono-ventajas-cards_smiley-face.svg" alt="Icono ventaja">
+                    <h4>Beneficio 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nihil dolores facere, eum consectetur doloremque.</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <!--------------- Section Contacto --------------->
+        <section id="contacto">
+            <h2>Contactame</h2>
+            <div class="container-contact">
+                <img src="assets/img/Contact/Mention-bro.svg" alt="Contactame" class="img-contactame">
+
+                <div class="container-info">
+                    <div class="container-info-cards">
+                        
+                        <div class="card-contact">
+                            <img src="assets/img/Icono/icon_chat.svg" alt="Icono Chat">
+                            <h4>LLamame o Escribeme</h4>
+                            <p>+54 9 385 xxx-xxxx</p>
+                        </div>
+
+                        <div class="card-contact">
+                            <img src="assets/img/Icono/icon_mail.svg" alt="Icono Email">
+                            <h4>Enviame un Email</h4>
+                            <p>example@gmail.com</p>
+                        </div>
+
+                    </div>
+
+                    <div class="redes">
+                        <a href="#"><img src="assets/img/Icono/icon-instagram.svg" alt="Icono Instagram" class="icon-1"></a>
+                        <a href="#"><img src="assets/img/Icono/icon-facebook.svg" alt="Icono Facebook" class="icons-contact"></a>
+                        <a href="#"><img src="assets/img/Icono/icon-twiiter.svg" alt="Icono Twiiter" class="icons-contact"></a>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+
+
+
+        </section>
     </main>
+
+    <footer>
+        <img src="assets/img/logo-white.png" alt="logo">
+        <p>© Copiright - Todos los derechos reservados</p>
+        <p>Hecho con ❤️</p>
+    </footer>
 </body>
 </html>

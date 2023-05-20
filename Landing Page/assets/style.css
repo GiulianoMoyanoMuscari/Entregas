@@ -3,6 +3,7 @@
 :root{
     /*bg colors*/
     --background: #02050e;
+    --secondary: #272d37;
 
     
     /*Text colors*/
@@ -12,12 +13,14 @@
     --text-black: #000000; 
     
     /*Decoration*/
-    --fire: #ff6d00;
+    --fire: #ff6f00c5;
     --electric: #64d3ff;
+    --neon-rose: #F3ACC5;
+    --rose: #eb259c;
 
     /* Gardientes */
     --chear-up-emo-kid:  #556270, #ff6b6b;
-    --crazy-orange: #d38312, #a83279;
+    --crazy-orange: #d38312, #c53e8f;
     --orange-fun: #fc4a1a, #f7b733;
     }
 
@@ -31,17 +34,20 @@
 }
 
 
-
-/* Header y Barra de Navegacion */
+/* ------------------------- Header y Barra de Navegacion ------------------------- */
 header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
     background: linear-gradient(to left, var(--orange-fun));
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 65px;
-    padding: 0 30px 0;
+    padding: 20px 30px;
+    box-shadow: 1px 1px 30px  rgba(255,111,0 ,0.5); 
 }
+
 
 .logo{
     width: 50px;
@@ -60,6 +66,11 @@ header{
     word-spacing: 5px;
 }
 
+#menu-toggle,
+.menu-label{
+    display: none;
+}
+
 .navbar-list{
     display: flex;
     align-items: center;
@@ -68,7 +79,7 @@ header{
 }
 
 .navbar-list a{
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 500;
     color: var(--text-black);
 }
@@ -84,69 +95,247 @@ header{
 
 
 
-/* Main */
+/* ---------------------------- Main ---------------------------- */
 main{
     background-color: var(--background);
     color: var(--text-white);
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 
-/* Section-hero */
+/* ---------- Section-hero ---------- */
 #hero{
-    display: flex;
-    justify-content:center ;
-    align-items: center;
     margin-top: 60px;
     padding: 70px 0;
     max-width: 1200px;
-    gap: 10%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
-#hero img{
-    width: 40%;
-}
 
 .hero-info{
-    width: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 30px;
+    gap: 20px;
+    width: 60%;
 }
 
 .hero-info h1{
     font-size: 48px;
     font-weight: 800;
-    min-width: 500px;
-    background: linear-gradient(to right, #D38312, #A83279);
+    background: linear-gradient(45deg, var(--crazy-orange));
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    width: 80%;
+    min-width: 500px;
+}
+
+.hero-info h3{
+    font-size: 28px;
+    width: 80%;
 }
 
 .hero-info p{
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
-    text-align: center;
+    text-align: start;
 }
 
-
-/* Section Información */
-#info{
-    max-width: 1200px;
-    padding: 70px 0;
+.info-icon{
     display: flex;
     align-items: center;
+}
+
+.info-icon p{
+    margin-right: 40px;
+}
+
+.icons-hero{
+    width: 48px;
+}
+
+#hero > img{
+    width: 30%;
+    transition-property: transform, filter;
+    transition-duration: 1.5s;
+}
+
+#hero img:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 5px var(--neon-rose));
+}
+
+/* ---------- Section Información ---------- */
+#info{
+    max-width: 1200px;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 #info p{
-    width: 70%;
+    width: 80%;
     text-align: center;
+    font-size: 24px;
+}
+
+
+/* ---------- Section Ventajas + Cards ---------- */
+#ventajas{
+    max-width: 1200px;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+}
+
+h2{
+    font-size: 32px;
+}
+
+.info-ventajas{
+    font-size: 18px;
+    width: 90%;
+}
+.container-cards{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-ventaja{
+    width: 310px;
+    height: 350px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to right, var(--crazy-orange)) 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    transition-property:transform, filter ;
+    transition-duration: 1s;
+    padding: 0 10px;
+}
+
+.card-ventaja p{
     font-size: 16px;
 }
+
+.card-ventaja:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(1px 1px 10px var(--neon-rose));
+}
+
+h4{
+    font-size: 22px;
+}
+
+
+/* --------------- Section Contacto --------------- */
+#contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    max-width: 1200px;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+
+.container-contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img-contactame{
+    filter: drop-shadow(0px 0px 10px var(--neon-rose));
+    width: 35%;
+}
+
+.container-info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.container-info-cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.card-contact{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+
+.card-contact img{
+    width: 90%;
+}
+
+.redes{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.icons-contact{
+    width: 48px;
+}
+
+.icon-1{
+    width: 53px;
+}
+
+
+
+
+
+
+/* ---------------------------- footer ----------------------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 0;
+    background: linear-gradient(to top, var(--orange-fun));
+    box-shadow: 1px 1px 30px var(--fire) ; 
+}
+
+
+footer p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer p:last-child{
+    font-weight: 600;
+}
+
